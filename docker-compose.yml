@@ -1,6 +1,10 @@
 version: "2.2"
 
 services:
+  application:
+    image: sdeleuze/spring-boot-crac-demo:checkpoint
+    ports:
+      - 8080:8080
   postgres:
     image: postgres:15.3
     ports:
@@ -9,3 +13,5 @@ services:
       - POSTGRES_PASSWORD=cashcard
       - POSTGRES_USER=cashcard
       - POSTGRES_DB=cashcard
+    volumes:
+      - ./db/:/docker-entrypoint-initdb.d
