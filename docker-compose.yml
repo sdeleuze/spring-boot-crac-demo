@@ -1,0 +1,13 @@
+version: "2.2"
+
+services:
+  postgres:
+    image: postgres:15.3
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=cashcard
+      - POSTGRES_USER=cashcard
+      - POSTGRES_DB=cashcard
+    volumes:
+      - ./db/:/docker-entrypoint-initdb.d
