@@ -5,11 +5,11 @@ import com.zaxxer.hikari.pool.HikariPool;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import org.springframework.context.SmartLifecycle;
+import org.springframework.context.Lifecycle;
 import org.springframework.stereotype.Component;
 
 @Component
-public class HikariLifecycle implements SmartLifecycle {
+public class HikariLifecycle implements Lifecycle {
 
 	private static final Logger logger = LoggerFactory.getLogger(HikariLifecycle.class);
 
