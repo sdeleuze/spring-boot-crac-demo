@@ -9,6 +9,5 @@ RUN tar --extract --file $JAVA_HOME/openjdk.tar.gz --directory "$JAVA_HOME" --st
 RUN mkdir -p /opt/app
 COPY target/spring-boot-crac-demo-1.0.0-SNAPSHOT.jar /opt/app/spring-boot-crac-demo-1.0.0-SNAPSHOT.jar
 COPY src/scripts/entrypoint.sh /opt/app/entrypoint.sh
-RUN mkdir -p $CRAC_FILES_DIR
 
 ENTRYPOINT /opt/app/entrypoint.sh
