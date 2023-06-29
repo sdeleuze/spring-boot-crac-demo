@@ -8,8 +8,7 @@ ADD "https://cdn.azul.com/zulu/bin/zulu17.42.21-ca-crac-jdk17.0.7-linux_x64.tar.
 RUN tar --extract --file $JAVA_HOME/openjdk.tar.gz --directory "$JAVA_HOME" --strip-components 1; rm $JAVA_HOME/openjdk.tar.gz;
 RUN mkdir -p /opt/app
 COPY target/spring-boot-crac-demo-1.0.0-SNAPSHOT.jar /opt/app/spring-boot-crac-demo-1.0.0-SNAPSHOT.jar
-COPY src/scripts/entrypoint-checkpoint.sh /opt/app/entrypoint-checkpoint.sh
-COPY src/scripts/entrypoint-restore.sh /opt/app/entrypoint-restore.sh
+COPY src/scripts/entrypoint.sh /opt/app/entrypoint.sh
 RUN mkdir -p $CRAC_FILES_DIR
 
-ENTRYPOINT /opt/app/entrypoint-checkpoint.sh
+ENTRYPOINT /opt/app/entrypoint.sh
