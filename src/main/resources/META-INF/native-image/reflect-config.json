@@ -1,7 +1,0 @@
-[
-  {
-    "name": "org.eclipse.jetty.server.ForwardedRequestCustomizer$Forwarded",
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true
-  }
-]
