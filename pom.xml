@@ -55,36 +55,6 @@
 		</plugins>
 	</build>
 
-	<profiles>
-		<profile>
-			<id>aot</id>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.springframework.boot</groupId>
-						<artifactId>spring-boot-maven-plugin</artifactId>
-						<executions>
-							<execution>
-								<id>process-aot</id>
-								<goals>
-									<goal>process-aot</goal>
-								</goals>
-							</execution>
-						</executions>
-						<configuration>
-							<image>
-								<env>
-									<BPE_DELIM_JAVA_TOOL_OPTIONS xml:space="preserve"> </BPE_DELIM_JAVA_TOOL_OPTIONS>
-									<BPE_APPEND_JAVA_TOOL_OPTIONS>-Dspring.aot.enabled=true</BPE_APPEND_JAVA_TOOL_OPTIONS>
-								</env>
-							</image>
-						</configuration>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-	</profiles>
-
 	<repositories>
 		<repository>
 			<id>spring-milestones</id>
