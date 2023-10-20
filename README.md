@@ -13,7 +13,7 @@ From within the `spring-boot-crac-demo` folder, you have the choice to run eithe
 
 Or to run an [automatic checkpoint/restore at startup](https://docs.spring.io/spring-framework/reference/6.1/integration/checkpoint-restore.html#_automatic_checkpointrestore_at_startup) with:
 ```
-./checkpoint.sh
+./checkpointOnRefresh.sh
 ```
 
 ### Step 2: Restore
